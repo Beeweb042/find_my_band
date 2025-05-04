@@ -25,11 +25,11 @@
 ## ⚙️ Comportement attendu
 
 ### État initial
-- L'application affiche uniquement un bouton "Find my band!"
+- L'application affiche uniquement un bouton **FindMyBand**
 - Aucun groupe, pays ou média n’est visible
 
 ### Après clic sur le bouton
-- Une carte s’affiche avec :
+- Une carte **CardBand** s’affiche avec :
   - le nom du groupe
   - son pays d’origine
   - une icône YouTube menant à une vidéo
