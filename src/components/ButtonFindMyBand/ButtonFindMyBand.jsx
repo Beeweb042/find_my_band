@@ -1,16 +1,15 @@
-import React from 'react';
-import './ButtonFindMyBand.css';
+import React from "react";
+import "./ButtonFindMyBand.css";
 
-function ButtonFindMyBand() {
+function ButtonFindMyBand(props) {
+  // Functional stateless component that renders the main action button.
+  // Receives `onClick` as a prop from App to trigger random band selection.
 
   return (
-    <>
-    <button>
-        <h2>BOUTON</h2>
-        
-    </button>
-    </>
-  )
-}
+      <button onClick={props.onClick}>
+          Find my Band !
+      </button>
+  );
+};
 
 export default ButtonFindMyBand;

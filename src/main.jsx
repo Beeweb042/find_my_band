@@ -10,7 +10,5 @@ import BandCard from './components/BandCard/BandCard.jsx'
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <App />
-    <ButtonFindMyBand/>
-    <BandCard/>
   </StrictMode>,
 )
