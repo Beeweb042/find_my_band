@@ -6,9 +6,11 @@ function ButtonFindMyBand(props) {
   // Receives `onClick` as a prop from App to trigger random band selection.
 
   return (
-      <button onClick={props.onClick}>
-          Find my Band !
-      </button>
+    <button className="bg-blue-600 hover:bg-blue-800 text-white py-2 px-4 rounded"
+    onClick={props.onClick}>
+  Find My Band!
+</button>
+
   );
 };
 

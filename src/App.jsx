@@ -20,7 +20,9 @@ function App() {
   
   return (
     <>
-    <h1>DECOUVRE TON NOUVEAU GROUPE METAL</h1>
+<h1 className="text-4xl text-green-700 font-bold underline">
+  Test Tailwind OK
+</h1>
 
     {/* Trigger random band selection on click */}
     <ButtonFindMyBand onClick={handleClick} />
