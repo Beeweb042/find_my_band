@@ -1,8 +1,7 @@
-import React, { useState } from 'react';
-import Bands from './data/bands';
-import ButtonFindMyBand from './components/ButtonFindMyBand/ButtonFindMyBand';
-import BandCard from './components/BandCard/BandCard';
-import './App.css'
+import React, { useState } from "react";
+import Bands from "./data/bands";
+import ButtonFindMyBand from "./components/ButtonFindMyBand/ButtonFindMyBand";
+import BandCard from "./components/BandCard/BandCard";
 
 function App() {
   // state to store the random selected band
@@ -11,29 +10,27 @@ function App() {
   // handler function : select a band randomly in "bands.js" and update the state
   function handleClick() {
     const randomBand = Math.floor(Math.random() * Bands.length);
-    console.log("groupe aléatoire : ", randomBand)
+    console.log("groupe aléatoire : ", randomBand);
 
     setSelectedBand(Bands[randomBand]);
     console.log("groupe mis en mémoire : ", Bands[randomBand]);
-  };
+  }
 
-  
   return (
     <>
-<h1 className="text-4xl text-green-700 font-bold underline">
-  Test Tailwind OK
-</h1>
+      <div className=" flex flex-col gap-6 items-center min-h-max p-16">
+        <h1 className="text-5xl text-red-700 font-bold flex-auto">
+          Découvre ta nouvelle pépite métal
+        </h1>
 
-    {/* Trigger random band selection on click */}
-    <ButtonFindMyBand onClick={handleClick} />
+        {/* Trigger random band selection on click */}
+        <ButtonFindMyBand onClick={handleClick} />
 
-    {/* Conditionally render BandCard if a band has been selected */}
-    { selectedBand &&
-      <BandCard band={selectedBand} />
-    }
-
+        {/* Conditionally render BandCard if a band has been selected */}
+        {selectedBand && <BandCard band={selectedBand} />}
+      </div>
     </>
   );
-};
+}
 
 export default App;

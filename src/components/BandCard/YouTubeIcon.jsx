@@ -1,5 +1,4 @@
 import React from 'react';
-import './YouTubeIcon.css';
 
 function YouTubeIcon() {
   // Stateless presentational component that renders a placeholder YouTube icon
@@ -7,7 +6,7 @@ function YouTubeIcon() {
 
   return (
     <span>
-      Extrait YT🔗
+      🎶 Extrait YT
     </span>
   );
 };
