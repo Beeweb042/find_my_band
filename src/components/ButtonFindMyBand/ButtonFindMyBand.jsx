@@ -6,14 +6,12 @@ function ButtonFindMyBand(props) {
 
   return (
     <button className="
-    bg-amber-400 hover:bg-red-700 
-    text-black hover:text-white
-    uppercase tracking-wide font-extrabold 
+    bg-gradient-to-b from-pink-500 to-purple-800
+    text-white
+    uppercase tracking-wide font-bold 
     py-4 px-8 rounded-full
     transition duration-200 ease-in-out hover:scale-105 
     cursor-pointer   
-    border-4 border-red-700 
-    shadow-md shadow-amber-500
     "
     onClick={props.onClick}>
   Find My Band!

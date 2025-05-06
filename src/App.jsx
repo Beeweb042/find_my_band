@@ -18,9 +18,9 @@ function App() {
 
   return (
     <>
-      <div className=" flex flex-col gap-6 items-center min-h-max p-16">
-        <h1 className="text-5xl text-red-700 font-bold flex-auto">
-          Découvre ta nouvelle pépite métal
+      <div className=" bg-gradient-to-bl from-black to-gray-600 flex flex-col gap-6 items-center min-h-max p-16">
+        <h1 className="text-5xl bg-gradient-to-t from-pink-500 to-purple-800 text-transparent bg-clip-text font-metalmania uppercase">
+          Découvre ta nouvelle pépite
         </h1>
 
         {/* Trigger random band selection on click */}
