@@ -18,8 +18,12 @@ function App() {
 
   return (
     <>
-      <div className=" bg-gradient-to-bl from-black to-gray-600 flex flex-col gap-6 items-center min-h-max p-16">
-        <h1 className="text-5xl bg-gradient-to-t from-pink-500 to-purple-800 text-transparent bg-clip-text font-metalmania uppercase">
+      <div className=" 
+      bg-gradient-to-bl from-black to-gray-600 
+      flex flex-col gap-6 items-center 
+      min-h-max p-16 
+      ">
+        <h1 className="text-5xl bg-linear-to-t/shorter from-pink-500 to-purple-800 text-transparent bg-clip-text font-metalmania uppercase">
           Découvre ta nouvelle pépite
         </h1>
 

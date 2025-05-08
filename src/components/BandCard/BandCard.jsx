@@ -1,23 +1,50 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import YouTubeIcon from "./YouTubeIcon";
 import HeartIcon from "./HeartIcon";
 
 function BandCard(props) {
-  // This component receives a `band` object via props and displays:
-  // - the band name
-  // - the country of origin
-  // - a clickable YouTube icon linking to a track
-  // - a heart icon to favorite (logic to be added later)
+  const cardRef = useRef(null);
+
+  useEffect(() => {
+    const card = cardRef.current;
+    if (!card) return;
+
+    function handleMouseMove(event) {
+      const rect = card.getBoundingClientRect();
+
+      const x = event.clientX - rect.left - rect.width / 2;
+      const y = event.clientY - rect.top - rect.height / 2;
+
+      const rotateX = (-y / rect.height) * 24;
+      const rotateY = (x / rect.width) * 24;
+
+      card.style.transform = `
+        perspective(500px) 
+        rotateX(${rotateX}deg) 
+        rotateY(${rotateY}deg) 
+        scale3d(1.05, 1.05, 1.05)
+        `;
+    }
+
+    card.addEventListener("mousemove", handleMouseMove);
+
+    return () => {
+      card.removeEventListener("mousemove", handleMouseMove);
+    };
+  }, []);
 
   return (
     <div
+      ref={cardRef}
       className="
-      bg-gradient-to-r from-pink-500 to-purple-800
-      w-2/3                          
+      bg-linear-to-b/shorter from-pink-500 to-purple-700
+      bg-[length:200%_200%]                          
       flex flex-col gap-2.5
       rounded-3xl p-6
       text-2xl
       shadow-md shadow-purple-900
+      transition-transform duration-500 ease-[cubic-bezier(0.03,0.98,0.52,0.99)]
+
       "
     >
       <h3

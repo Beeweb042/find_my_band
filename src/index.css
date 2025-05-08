@@ -1,6 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap");
 @import "tailwindcss";
 
 @theme {
-    --font-metalmania:  "Metal Mania", system-ui ;
-  }
+  --font-metalmania: "Metal Mania", system-ui;
+}
+
+
